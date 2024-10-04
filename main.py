@@ -35,6 +35,10 @@ def main():
             if a.is_coliding(player):
                 print("Game Over!")
                 return
+            for s in shoots:
+                if a.is_coliding(s):
+                    a.split()
+                    s.kill()
 
         screen.fill("#000000")
         for d in drawable:
